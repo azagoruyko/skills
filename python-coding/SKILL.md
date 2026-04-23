@@ -1,6 +1,6 @@
 ---
-name: coding
-description: Global AI Rules for coding projects. Defines standards for code style, architecture, Python usage, error handling, documentation, and specific naming conventions. Use when writing, editing, or generating code.
+name: python-coding
+description: General rules for python projects. Defines standards for code style, architecture, Python usage, error handling, documentation, and specific naming conventions. Use when writing, editing, or generating code.
 ---
 
 These rules apply to all code you write.
