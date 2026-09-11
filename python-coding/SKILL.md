@@ -8,8 +8,8 @@ These rules apply to all code you write.
 ## Code Style & Architecture
 
 - Always follow the project naming conventions and code style, i.e. camelCase, snake_case.
-- Always use the simplest solution that works and easy to understand. Don't over-engineer!
-- Avoid creating small, redundant functions used once. Inline logic when appropriate or use reusable utilities.
+- Always use the simplest solution that works and is easy to understand. Don't over-engineer!
+- Avoid creating small, redundant functions used only once. Inline logic when appropriate or use reusable utilities.
 - While implementing a feature or fixing a bug, always take a look at how it's usually handled in the project's files. Learn standard practices from the codebase.
 - Avoid 'Safers': Avoid using hasattr or other "safe" attribute checks in a general way. Rely on the expected object interface.
 - Use functools.partial (preferred) or lambda when adapting function signatures for callbacks or connectors.
