@@ -5,6 +5,8 @@ description: General rules for python projects. Defines standards for code style
 
 These rules apply to all code you write.
 
+**MAIN RULE**: Keep the code simple, straightforward and readable.
+
 ## Code Style & Architecture
 
 - Always follow the project naming conventions and code style, i.e. camelCase, snake_case.
@@ -13,8 +15,19 @@ These rules apply to all code you write.
 - While implementing a feature or fixing a bug, always take a look at how it's usually handled in the project's files. Learn standard practices from the codebase.
 - Avoid 'Safers': Avoid using hasattr or other "safe" attribute checks in a general way. Rely on the expected object interface.
 - Use functools.partial (preferred) or lambda when adapting function signatures for callbacks or connectors.
+- Always add a blank line before a statement when the previous non-empty line has a smaller indentation level (i.e. when "dedenting" out of a block). Example:
+  ```python
+  # incorrect
+  if a:
+      code
+  other_code
 
-**MAIN RULE**: Keep the code simple, straightforward and readable.
+  # correct
+  if a:
+      code
+
+  other_code
+  ```
 
 ## Error Handling
 
