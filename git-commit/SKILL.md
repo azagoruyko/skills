@@ -13,14 +13,14 @@ Analyze all unstaged and staged changes, split them into logical groups, and com
 2. **Group** – Group related changes. Prefer:
    - Independent changes in separate commits (e.g. refactor in one, feature in another).
    - If changes depend on each other, commit the least-dependent (foundational) changes first so rollbacks leave the project in a working state.
-3. **Commit** – For each group:
+3. **Stage and review** – For each group:
    - **Whole-file staging** – When all changes in a file belong to this group: `git add <path>`.
    - **Chunk staging** – When a file has changes for different groups, stage only the hunks for this group:
      - Inspect hunks with `git diff <path>` (unstaged) or `git diff --cached <path>` (staged).
      - Create a patch file with only the hunks for this group, then: `git apply --cached <patchfile>`.
-   - Write a clear commit message for that group.
-   - Run `git commit`.
-4. **Repeat** – Continue until all changes are committed.
+   - Use the `diff-analyzer` skill to review the staged changes before committing. If it finds a confirmed issue in this group or cannot meaningfully review it, stop and report the reason. After any correction, review the staged changes again.
+4. **Commit** – If the review finds no confirmed issues, write a clear message for the group and run `git commit`.
+5. **Repeat** – Continue until all changes are committed.
 
 ## Commit message format
 
