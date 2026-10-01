@@ -12,3 +12,6 @@ An intelligent git commit assistant that groups and commits working-directory ch
 
 ### `new-version`
 Automates the release process by bumping the project version using semantic versioning based on commits since the last tag. It updates the canonical version in the code, creates a commit and tag for the release, and generates release notes.
+
+### `diff-analyzer`
+Reviews the current Git diff in a Python repository for reproducible bugs and regressions, using project documentation, tests, and existing code patterns as the source of truth.
