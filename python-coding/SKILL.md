@@ -12,6 +12,7 @@ These rules apply to all code you write.
 - Always follow the project naming conventions and code style, i.e. camelCase, snake_case.
 - Organize code into logical groups separated by blank lines. Keep statements that define, configure, or operate on the same entity together; add a blank line before moving to a different entity or logical step. Avoid dense runs of unrelated statements, and do not separate every individual statement with a blank line.
 - Always use the simplest solution that works and is easy to understand. Don't over-engineer!
+- Change only what the task requires and preserve unrelated code. For bug fixes, find the underlying cause and choose the smallest coherent solution instead of patching symptoms or making incidental refactors.
 - Avoid creating small, redundant functions used only once. Inline logic when appropriate or use reusable utilities.
 - While implementing a feature or fixing a bug, always take a look at how it's usually handled in the project's files. Learn standard practices from the codebase.
 - Avoid 'Safers': Avoid using hasattr or other "safe" attribute checks in a general way. Rely on the expected object interface.
